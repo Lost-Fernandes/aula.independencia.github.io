@@ -105,7 +105,7 @@ header {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
 
-.learn-more .circle .icon.arrow::before {
+/*.learn-more .circle .icon.arrow::before {
   content: "";
   position: absolute;
   top: -0.29rem;
@@ -115,7 +115,7 @@ header {
   border-top: 0.125rem solid #f0e9e9;
   border-right: 0.125rem solid #f0e9e9;
   transform: rotate(45deg);
-}
+}*/
 
 .learn-more .button-text {
   margin-left: 1.85rem;
@@ -270,5 +270,6 @@ footer {
     padding: 10px;
   }
 }
+
 
 
