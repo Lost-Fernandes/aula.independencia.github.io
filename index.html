@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <link rel="stylesheet" href="css/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Indepedência do Brasil</title>
+    <title>Independência do Brasil</title>
+    <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
   </head>
   <body>
+    <!-- ==========================
+         HEADER COM SWIPER
+    ========================== -->
     <header>
       <div class="swiper">
         <div class="swiper-wrapper">
+          <!-- Slide 1 -->
           <div class="swiper-slide">
             <div class="slide parte1">
               <div class="slide_texts">
-                <h1>A Independencia do Brasil</h1>
+                <h1>A Independência do Brasil</h1>
               </div>
             </div>
           </div>
+          <!-- Slide 2 -->
           <div class="swiper-slide">
             <div class="slide parte2">
               <div class="slide_texts">
@@ -33,11 +38,29 @@
                     <span class="button-text">Saiba mais</span>
                   </button>
                 </a>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="slide parte3">
+              <div class="slide_texts">
+                <h1>História e Cultura</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Botões de navegação -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
     </header>
+
+    <!-- ==========================
+         CONTEÚDO PRINCIPAL
+    ========================== -->
     <main>
+      <!-- DESCRIÇÃO 7 DE SETEMBRO -->
       <div class="descricao">
         <h1>7 de setembro</h1>
         <div class="explicacao">
@@ -53,12 +76,18 @@
           </p>
           <img
             src="https://static.todamateria.com.br/upload/in/de/independencia-do-brasil-og.jpg"
+            alt="Independência do Brasil"
           />
         </div>
+      </div>
+
+      <!-- DOM PEDRO I -->
+      <div class="descricao">
         <h1>Dom Pedro I</h1>
         <div class="dom_pedro">
           <img
             src="https://www.cache2net4.com//Repositorio/10105/Publicacoes/430582/dom%20pedro%201.png?=1944335-1"
+            alt="Dom Pedro I"
           />
           <p>
             Dom Pedro I, nascido em 1798, desempenhou um papel fundamental na
@@ -71,6 +100,8 @@
           </p>
         </div>
       </div>
+
+      <!-- POEMA DO IPIRANGA -->
       <div class="ino">
         <div class="ipiranga">
           <p>Ouviram do Ipiranga as margens plácidas</p>
@@ -121,18 +152,25 @@
           <p>Ó Pátria amada!</p>
           <p>Dos filhos deste solo, és mãe gentil</p>
           <p>Pátria amada, Brasil!</p>
-        </div>        
+        </div>
       </div>
     </main>
+
+    <!-- ==========================
+         FOOTER
+    ========================== -->
     <footer>
       <span>&copy; Pascoal Fernandes Costa</span>
     </footer>
+
+    <!-- ==========================
+         SCRIPTS SWIPER
+    ========================== -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".swiper", {
         direction: "horizontal",
         loop: true,
-        autoplay: true,
         autoplay: {
           delay: 6000,
         },
@@ -142,8 +180,5 @@
         },
       });
     </script>
-    <script src="script.js"></script>
   </body>
 </html>
-
-
