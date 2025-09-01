@@ -1,3 +1,4 @@
+/* ==================== BASE ==================== */
 :root {
   --azul: #063fbe;
   --verde: #30a405;
@@ -9,8 +10,8 @@
   --cinza: #bbaf99;
 }
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 html,
@@ -18,8 +19,11 @@ body {
   overflow-x: hidden !important;
 }
 body {
-   border-color: var(--wood-700);
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
 }
+
+/* ==================== HEADER / SLIDER ==================== */
 header {
   width: 100vw;
   height: 100vh;
@@ -29,8 +33,8 @@ header {
   background-attachment: fixed;
 }
 .swiper {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 .slide {
   display: flex;
@@ -40,34 +44,27 @@ header {
   width: 100%;
   height: 100%;
 }
-.parte1,.parte2,.parte3 {
+.parte1, .parte2, .parte3 {
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .slide h1 {
   color: rgb(39, 39, 39);
-  font-size: 60px;
-  font-family: 'Courier New', Courier, monospace;
-}
-.parte1 {
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Pedro_Am%C3%A9rico_-_Independ%C3%AAncia_ou_Morte_-_cores_ajustadas.jpg/800px-Pedro_Am%C3%A9rico_-_Independ%C3%AAncia_ou_Morte_-_cores_ajustadas.jpg);
-}
-.parte2 {
-  background-image: url(https://www.otempo.com.br/image/contentid/policy:1.2728360:1662467170/coroacao-de-dom-pedro-i-by-debret-jpg.jpg?f=3x2&w=1224);
-}
-.parte3 {
-  background-image: url(https://i0.wp.com/jornal.usp.br/wp-content/uploads/2022/12/20221130_00_comercio_brasil_imperial_porto_estrela.jpg?fit=768%2C403&ssl=1);
+  font-size: clamp(28px, 6vw, 60px); /* Responsivo */
+  text-align: center;
 }
 .slide_texts {
-  background-color: rgb(188, 188, 188,.6);
-  border-radius: 30px;
-  padding: 30px;
+  background-color: rgba(188, 188, 188, 0.6);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
 }
-.swiper-button-prev,.swiper-button-next{
+.swiper-button-prev, .swiper-button-next {
   border-radius: 50%;
   background-color: white;
   border:1px solid black;
-  padding: 30px;
+  padding: 20px;
   transition: .5s;
   color: black !important;
 }
@@ -76,300 +73,119 @@ header {
   border: 1px solid white;
   color: white !important;
 }
-a {
-  text-decoration: none;
-}
-.baixo {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-  background-attachment: fixed;
-}
 
-.baixo h1 {
-  font-size: 90px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: transparent;
-  -webkit-text-stroke: 3px white;
-}
-.baixo * {
-  margin-left: 20px;
-}
-header button {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  vertical-align: middle;
-  text-decoration: none;
-  background: transparent;
-  padding: 0;
-  font-size: inherit;
-  font-family: inherit;
-}
-
-header button.learn-more {
-  width: 12rem;
-  height: auto;
-}
-
-header button.learn-more .circle {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: relative;
-  display: block;
-  margin: 0;
-  width: 3rem;
-  height: 3rem;
-  background: var(--verde);
-  border-radius: 1.625rem;
-}
-
-header button.learn-more .circle .icon {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  background: #fff;
-}
-
-header button.learn-more .circle .icon.arrow {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  left: 0.625rem;
-  width: 1.125rem;
-  height: 0.125rem;
-  background: none;
-}
-
-header button.learn-more .circle .icon.arrow::before {
-  position: absolute;
-  content: "";
-  top: -0.29rem;
-  right: 0.0625rem;
-  width: 0.625rem;
-  height: 0.625rem;
-  border-top: 0.125rem solid #fff;
-  border-right: 0.125rem solid #fff;
-  transform: rotate(45deg);
-}
-
-header button.learn-more .button-text {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0.75rem 0;
-  margin: 0 0 0 1.85rem;
-  color: #282936;
-  font-weight: 700;
-  line-height: 1.6;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-header button:hover .circle {
-  width: 100%;
-}
-
-header button:hover .circle .icon.arrow {
-  background: #fff;
-  transform: translate(1rem, 0);
-}
-
-header button:hover .button-text {
-  color: #fff;
-}
+/* ==================== MAIN ==================== */
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  gap: 30px;
+  padding: 20px;
 }
 main h1 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: white;
-}
-.mural {
-  display: grid;
-  width: 100vw;
-  grid-template-columns: 600px 600px;
-  justify-items: center;
-  align-items: center;
-  gap: 10px;
-  background-image: url(https://st4.depositphotos.com/21038662/22917/i/450/depositphotos_229172680-stock-photo-old-brown-paper-background.jpg);
-  padding: 20px;
-  background-attachment: fixed;
-  padding: 30px;
-}
-.foto_mural {
-  width: 100%;
-  border-radius: 20px;
-  animation: descida 2s linear infinite alternate;
-}
-.foto_mural:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.foto_mural:nth-child(2) {
-  animation-delay: 0.5s;
-}
-
-.foto_mural:nth-child(3) {
-  animation-delay: 1s;
-}
-
-.foto_mural:nth-child(4) {
-  animation-delay: 1.5s;
+  text-align: center;
 }
 .descricao {
-  background-image: url(https://img.freepik.com/fotos-gratis/close-de-um-mapa-mundi-vintage-feito-com-quebra-cabecas_181624-19260.jpg?t=st=1695243286~exp=1695243886~hmac=3437d725b67b95d664911888be5dc5da933c3515cabd352816ac728a2b2b4d0c);
+  background-image: url(https://img.freepik.com/fotos-gratis/close-de-um-mapa-mundi-vintage-feito-com-quebra-cabecas_181624-19260.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   padding: 20px;
+  width: 100%;
 }
-.descricao h1:nth-child(1) {
-  margin: 0px 39%;
+.descricao h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 .explicacao,
 .dom_pedro {
-  padding: 10px;
-  background-color: rgb(65, 65, 65, 0.5);
-  border-radius: 20px;
+  padding: 15px;
+  background-color: rgba(65, 65, 65, 0.6);
+  border-radius: 15px;
   border: 1px solid white;
-}
-.explicacao {
   display: flex;
-  width: 60%;
-  margin: 10px 39%;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px auto;
+  max-width: 900px;
 }
-.explicacao img {
-  border-radius: 30px;
-  width: 50%;
+.explicacao img,
+.dom_pedro img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+.explicacao p,
+.dom_pedro p {
+  flex: 1 1 250px;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
 }
 
-.explicacao p {
-  font-family: "Courier New", Courier, monospace;
-  color: white;
-}
-.importancia {
-  margin: 10px;
-}
-.dom_pedro {
-  display: flex;
-  width: 80%;
-  align-items: center;
-  margin-right: -10%;
-}
-.dom_pedro img {
-  width: 600px;
-  border-radius: 20px;
-}
-.dom_pedro p {
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  margin: 0px 10px;
-}
+/* ==================== HINO / TEXTO LONGO ==================== */
 .ino {
   display: flex;
-  align-items: end;
+  justify-content: center;
+  width: 100%;
 }
 .ipiranga {
-  height: 80vh;
-  width: 50vw;
-  padding: 10px;
+  height: 70vh;
+  width: 90%;
+  max-width: 800px;
+  padding: 15px;
   overflow-y: scroll;
+  background-image: url(https://img.freepik.com/fotos-gratis/fundo-do-assoalho-de-madeira_53876-88628.jpg);
   background-size: cover;
-  background-position: center;
-  background-image: url(https://img.freepik.com/fotos-gratis/fundo-do-assoalho-de-madeira_53876-88628.jpg?w=826&t=st=1695244031~exp=1695244631~hmac=a6e47d9b5d767f6b90e2963a776587c7927eb8d4725150b1bbbe5a0142cb0e4e);
+  border-radius: 15px;
 }
 .ipiranga p {
   font-family: "Courier New", Courier, monospace;
   color: black;
-  margin-left: 90px;
+  margin: 10px 0;
+  text-align: center;
 }
+
+/* ==================== FOOTER ==================== */
 footer {
   background-color: black;
-  padding: 30px;
+  padding: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
 }
-footer span{
+footer span {
   font-family: monospace;
   color: white;
-  font-size: 30px;
-}
-.button {
-  all: unset;
-  display: flex;
-  align-items: center;
-  position: relative;
-  padding: 0.6em 2em;
-  border: mediumspringgreen solid 0.15em;
-  border-radius: 0.25em;
-  color: mediumspringgreen;
-  font-size: 1.5em;
-  font-weight: 600;
-  cursor: pointer;
-  overflow: hidden;
-  transition: border 300ms, color 300ms;
-  user-select: none;
-  background-color: black;
+  font-size: 16px;
 }
 
-.button p {
-  z-index: 1;
-}
-
-.button:hover {
-  color: #212121;
-}
-
-.button:active {
-  border-color: teal;
-}
-
-.button::after, .button::before {
-  content: "";
-  position: absolute;
-  width: 9em;
-  aspect-ratio: 1;
-  background: mediumspringgreen;
-  opacity: 50%;
-  border-radius: 50%;
-  transition: transform 500ms, background 300ms;
-}
-
-.button::before {
-  left: 0;
-  transform: translateX(-8em);
-}
-
-.button::after {
-  right: 0;
-  transform: translateX(8em);
-}
-
-.button:hover:before {
-  transform: translateX(-1em);
-}
-
-.button:hover:after {
-  transform: translateX(1em);
-}
-
-.button:active:before,
-.button:active:after {
-  background: teal;
-}
-@keyframes descida {
-  0% {
-    transform: translateY(-15px);
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 768px) {
+  .swiper-button-prev, .swiper-button-next {
+    padding: 10px;
   }
-  100% {
-    transform: translateY(0px);
+  .explicacao, .dom_pedro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .descricao h1 {
+    font-size: 24px;
+  }
+  .ipiranga {
+    height: 60vh;
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .slide h1 {
+    font-size: 24px;
+  }
+  .explicacao img, .dom_pedro img {
+    width: 100%;
+  }
+  footer span {
+    font-size: 14px;
   }
 }
