@@ -99,7 +99,6 @@ header {
 .learn-more .circle {
   width: 3rem;
   height: 3rem;
-  background: var(--verde);
   border-radius: 50%;
   position: relative;
   display: inline-block;
@@ -271,3 +270,4 @@ footer {
     padding: 10px;
   }
 }
+
