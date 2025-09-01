@@ -112,8 +112,8 @@ header {
   right: 0.0625rem;
   width: 0.625rem;
   height: 0.625rem;
-  border-top: 0.125rem solid #fff;
-  border-right: 0.125rem solid #fff;
+  border-top: 0.125rem solid #f0e9e9;
+  border-right: 0.125rem solid #f0e9e9;
   transform: rotate(45deg);
 }
 
@@ -270,4 +270,5 @@ footer {
     padding: 10px;
   }
 }
+
 
