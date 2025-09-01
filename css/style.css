@@ -1,4 +1,3 @@
-/* ==================== BASE ==================== */
 :root {
   --azul: #063fbe;
   --verde: #30a405;
@@ -19,11 +18,12 @@ body {
   overflow-x: hidden !important;
 }
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+   border-color: var(--wood-700);
+   font-family: Arial, sans-serif;
+   background-color: #f5f5f5;
 }
 
-/* ==================== HEADER / SLIDER ==================== */
+/* ================= HEADER ================= */
 header {
   width: 100vw;
   height: 100vh;
@@ -44,23 +44,24 @@ header {
   width: 100%;
   height: 100%;
 }
-.parte1, .parte2, .parte3 {
+.parte1,.parte2,.parte3 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .slide h1 {
   color: rgb(39, 39, 39);
-  font-size: clamp(28px, 6vw, 60px); /* Responsivo */
+  font-size: clamp(28px, 6vw, 60px);
+  font-family: 'Courier New', Courier, monospace;
   text-align: center;
 }
 .slide_texts {
-  background-color: rgba(188, 188, 188, 0.6);
+  background-color: rgba(188, 188, 188, .6);
   border-radius: 20px;
   padding: 20px;
   text-align: center;
 }
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,.swiper-button-next{
   border-radius: 50%;
   background-color: white;
   border:1px solid black;
@@ -73,16 +74,21 @@ header {
   border: 1px solid white;
   color: white !important;
 }
+a {
+  text-decoration: none;
+}
 
-/* ==================== MAIN ==================== */
+/* ================= MAIN ================= */
 main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 30px;
   padding: 20px;
 }
 main h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: white;
   text-align: center;
 }
@@ -123,7 +129,7 @@ main h1 {
   font-family: "Courier New", Courier, monospace;
 }
 
-/* ==================== HINO / TEXTO LONGO ==================== */
+/* ================= HINO ================= */
 .ino {
   display: flex;
   justify-content: center;
@@ -135,8 +141,9 @@ main h1 {
   max-width: 800px;
   padding: 15px;
   overflow-y: scroll;
-  background-image: url(https://img.freepik.com/fotos-gratis/fundo-do-assoalho-de-madeira_53876-88628.jpg);
   background-size: cover;
+  background-position: center;
+  background-image: url(https://img.freepik.com/fotos-gratis/fundo-do-assoalho-de-madeira_53876-88628.jpg);
   border-radius: 15px;
 }
 .ipiranga p {
@@ -146,7 +153,7 @@ main h1 {
   text-align: center;
 }
 
-/* ==================== FOOTER ==================== */
+/* ================= FOOTER ================= */
 footer {
   background-color: black;
   padding: 20px;
@@ -154,13 +161,13 @@ footer {
   justify-content: center;
   text-align: center;
 }
-footer span {
+footer span{
   font-family: monospace;
   color: white;
   font-size: 16px;
 }
 
-/* ==================== RESPONSIVIDADE ==================== */
+/* ================= RESPONSIVIDADE ================= */
 @media (max-width: 768px) {
   .swiper-button-prev, .swiper-button-next {
     padding: 10px;
@@ -187,5 +194,15 @@ footer span {
   }
   footer span {
     font-size: 14px;
+  }
+}
+
+/* ================= ANIMAÇÕES ================= */
+@keyframes descida {
+  0% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
