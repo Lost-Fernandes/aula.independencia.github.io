@@ -1,3 +1,6 @@
+/* ==========================
+   VARIÁVEIS DE CORES
+========================== */
 :root {
   --azul: #063fbe;
   --verde: #30a405;
@@ -8,22 +11,25 @@
   --branco_sujo: #eacaa1;
   --cinza: #bbaf99;
 }
+
+/* ==========================
+   RESET E GERAL
+========================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html,
-body {
+
+html, body {
   overflow-x: hidden !important;
-}
-body {
-   border-color: var(--wood-700);
-   font-family: Arial, sans-serif;
-   background-color: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
 }
 
-/* ================= HEADER ================= */
+/* ==========================
+   HEADER E SWIPER
+========================== */
 header {
   width: 100vw;
   height: 100vh;
@@ -32,177 +38,236 @@ header {
   justify-content: center;
   background-attachment: fixed;
 }
+
 .swiper {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
+
 .slide {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+  position: relative;
 }
-.parte1,.parte2,.parte3 {
+
+.parte1, .parte2, .parte3 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-.slide h1 {
-  color: rgb(39, 39, 39);
-  font-size: clamp(28px, 6vw, 60px);
-  font-family: 'Courier New', Courier, monospace;
-  text-align: center;
+
+.parte1 {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Pedro_Am%C3%A9rico_-_Independ%C3%AAncia_ou_Morte_-_cores_ajustadas.jpg/800px-Pedro_Am%C3%A9rico_-_Independ%C3%AAncia_ou_Morte_-_cores_ajustadas.jpg);
 }
+
+.parte2 {
+  background-image: url(https://www.otempo.com.br/image/contentid/policy:1.2728360:1662467170/coroacao-de-dom-pedro-i-by-debret-jpg.jpg?f=3x2&w=1224);
+}
+
+.parte3 {
+  background-image: url(https://i0.wp.com/jornal.usp.br/wp-content/uploads/2022/12/20221130_00_comercio_brasil_imperial_porto_estrela.jpg?fit=768%2C403&ssl=1);
+}
+
 .slide_texts {
-  background-color: rgba(188, 188, 188, .6);
-  border-radius: 20px;
-  padding: 20px;
+  background-color: rgba(188, 188, 188, 0.6);
+  border-radius: 30px;
+  padding: 30px;
   text-align: center;
 }
-.swiper-button-prev,.swiper-button-next{
+
+.slide_texts h1 {
+  color: rgb(39, 39, 39);
+  font-size: 60px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Botão Saiba Mais */
+.learn-more {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+}
+
+.learn-more .circle {
+  width: 3rem;
+  height: 3rem;
+  background: var(--verde);
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+.learn-more .circle .icon.arrow::before {
+  content: "";
+  position: absolute;
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+.learn-more .button-text {
+  margin-left: 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Navegação Swiper */
+.swiper-button-prev, .swiper-button-next {
   border-radius: 50%;
   background-color: white;
-  border:1px solid black;
-  padding: 20px;
+  border: 1px solid black;
+  padding: 30px;
   transition: .5s;
-  color: black !important;
 }
-.swiper-button-prev:hover,.swiper-button-next:hover{
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
   background-color: black;
   border: 1px solid white;
   color: white !important;
 }
-a {
-  text-decoration: none;
-}
 
-/* ================= MAIN ================= */
+/* ==========================
+   MAIN - DESCRIÇÃO E DOM PEDRO
+========================== */
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  padding: 20px;
-}
-main h1 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: white;
-  text-align: center;
-}
-.descricao {
-  background-image: url(https://img.freepik.com/fotos-gratis/close-de-um-mapa-mundi-vintage-feito-com-quebra-cabecas_181624-19260.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  padding: 20px;
-  width: 100%;
-}
-.descricao h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.explicacao,
-.dom_pedro {
-  padding: 15px;
-  background-color: rgba(65, 65, 65, 0.6);
-  border-radius: 15px;
-  border: 1px solid white;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin: 20px auto;
-  max-width: 900px;
-}
-.explicacao img,
-.dom_pedro img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 15px;
-}
-.explicacao p,
-.dom_pedro p {
-  flex: 1 1 250px;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
 }
 
-/* ================= HINO ================= */
+.descricao {
+  background-image: url(https://img.freepik.com/fotos-gratis/close-de-um-mapa-mundi-vintage-feito-com-quebra-cabecas_181624-19260.jpg?t=st=1695243286~exp=1695243886~hmac=3437d725b67b95d664911888be5dc5da933c3515cabd352816ac728a2b2b4d0c);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px 0;
+}
+
+.explicacao, .dom_pedro {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(65, 65, 65, 0.5);
+  border-radius: 20px;
+  border: 1px solid white;
+  padding: 15px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.explicacao img, .dom_pedro img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+}
+
+.explicacao p, .dom_pedro p {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  flex: 1;
+}
+
+/* ==========================
+   POEMA IPIRANGA
+========================== */
 .ino {
   display: flex;
   justify-content: center;
   width: 100%;
 }
+
 .ipiranga {
-  height: 70vh;
   width: 90%;
-  max-width: 800px;
-  padding: 15px;
+  max-width: 600px;
+  height: 60vh;
   overflow-y: scroll;
+  background-image: url(https://img.freepik.com/fotos-gratis/fundo-do-assoalho-de-madeira_53876-88628.jpg?w=826&t=st=1695244031~exp=1695244631~hmac=a6e47d9b5d767f6b90e2963a776587c7927eb8d4725150b1bbbe5a0142cb0e4e);
   background-size: cover;
   background-position: center;
-  background-image: url(https://img.freepik.com/fotos-gratis/fundo-do-assoalho-de-madeira_53876-88628.jpg);
+  padding: 15px;
   border-radius: 15px;
 }
+
 .ipiranga p {
   font-family: "Courier New", Courier, monospace;
   color: black;
-  margin: 10px 0;
-  text-align: center;
+  margin-bottom: 8px;
 }
 
-/* ================= FOOTER ================= */
+/* ==========================
+   FOOTER
+========================== */
 footer {
   background-color: black;
   padding: 20px;
-  display: flex;
-  justify-content: center;
   text-align: center;
-}
-footer span{
-  font-family: monospace;
   color: white;
-  font-size: 16px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 
-/* ================= RESPONSIVIDADE ================= */
-@media (max-width: 768px) {
-  .swiper-button-prev, .swiper-button-next {
-    padding: 10px;
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+@media (max-width: 1024px) {
+  .slide_texts h1 {
+    font-size: 45px;
   }
+
   .explicacao, .dom_pedro {
     flex-direction: column;
-    align-items: center;
     text-align: center;
   }
-  .descricao h1 {
-    font-size: 24px;
-  }
-  .ipiranga {
-    height: 60vh;
-    font-size: 14px;
-  }
-}
-@media (max-width: 480px) {
-  .slide h1 {
-    font-size: 24px;
-  }
+
   .explicacao img, .dom_pedro img {
-    width: 100%;
-  }
-  footer span {
-    font-size: 14px;
+    max-width: 90%;
   }
 }
 
-/* ================= ANIMAÇÕES ================= */
-@keyframes descida {
-  0% {
-    transform: translateY(-15px);
+@media (max-width: 768px) {
+  .slide_texts h1 {
+    font-size: 35px;
+    padding: 15px;
   }
-  100% {
-    transform: translateY(0px);
+
+  .ipiranga {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide_texts h1 {
+    font-size: 28px;
+  }
+
+  .learn-more .button-text {
+    font-size: 0.9rem;
+  }
+
+  .explicacao, .dom_pedro {
+    width: 95%;
+  }
+
+  .descricao {
+    width: 95%;
+    padding: 10px;
   }
 }
